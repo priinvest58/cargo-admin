@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="priApp">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FastWay | Edit</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard" ng-controller="EditController">
+
+    <div id="preloader">
+        <i>.</i>
+        <i>.</i>
+        <i>.</i>
+    </div>
+
+    <div id="main-wrapper">
+
+
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <div class="header-content">
+                            <div class="header-left">
+
+
+                            </div>
+                            <div class="header-right">
+                                <div class="dark-light-toggle"><span class="dark"><i class="ri-moon-line"></i></span><span class="light"><i class="ri-sun-line"></i></span></div>
+
+                                <div class="dropdown profile_log dropdown">
+                                    <div data-toggle="dropdown" aria-haspopup="true" class="" aria-expanded="false">
+                                        <div class="user icon-menu active"><span><i class="ri-user-line"></i></span></div>
+                                    </div>
+                                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu dropdown-menu-right">
+                                        <div class="user-email">
+                                            <div class="user">
+                                                <span class="thumb"><img src="images/profile/3.png" alt=""></span>
+
+                                            </div>
+                                        </div>
+
+                                        <a class="dropdown-item logout" href="index.html"><i class="ri-logout-circle-line"></i>Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="brand-logo">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <span><i class="ri-home-5-line"></i></span>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="logout">
+                        <a href="index.html">
+                            <span><i class="ri-logout-circle-line"></i></span>
+                            <span class="nav-text">Signout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class=" col-xxl-12 col-xl-12 col-lg-12 col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Edit Percel</h4>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="col-xl-12">
+                                    <div class="card">
+                                        <div class="card-header">
+
+
+                                        </div>
+                                        <div class="card-body">
+                                            <form class="invoice-form">
+                                                <form>
+                                                    <div class="row justify-content-between">
+                                                        <div class="col-xl-5">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Sender Name</label>
+                                                                <input type="text" class="form-control" ng-model="user.senderName">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Receiver Name</label>
+                                                                <input type="text" class="form-control" ng-model="user.receiverName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-5">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Item Detail</label>
+                                                                <input type="text" class="form-control" ng-model="user.itemDetails">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">  Receiver Phone Number </label>
+                                                                <input type="text" class="form-control" ng-model="user.rPhoneNumber">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-5">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"> Weight </label>
+                                                                <input type="text" class="form-control" ng-model="user.weight">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label"> Additional Information </label>
+                                                                <input type="text" class="form-control" ng-model="user.addInfo">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xl-5">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"> Status </label>
+                                                                <input type="text" class="form-control" ng-model="user.status">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label"> Tracking Number </label>
+                                                                <input type="text" class="form-control" ng-model="user.trackingNumber">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="mb-3 col-xl-6">
+                                                            <label class="form-label">From</label>
+                                                            <input type="text" class="form-control" ng-model="user.from">
+                                                        </div>
+                                                        <div class=" mb-3 col-xl-3">
+                                                            <label class="form-label"> To</label>
+                                                            <input type="text" class="form-control" ng-model="user.to">
+                                                        </div>
+                                                        <div class="mb-3 col-xl-2">
+                                                            <label class="form-label">Delivery date</label>
+                                                            <input type="text" class="form-control" ng-model="user.deliveryDate">
+                                                        </div>
+
+                                                        <div class="col-xl-12">
+                                                            <a href="#" class="btn btn-primary " ng-click="updateForm()">Update Data</a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </form>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <script src="vendor/jquery/jquery.min.js "></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+
+
+
+
+    <script src="js/scripts.js "></script>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js "></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js "></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js "></script>
+
+    <script src="./lib/angular.min.js "></script>
+    <script src="./lib/moment.min.js "></script>
+    <script src="./lib/angular-moment.min.js "></script>
+    <script src="./js/app.js "></script>
+
+
+
+
+
+</body>
+
+
+
+</html>
+
+</html>
